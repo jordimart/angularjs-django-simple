@@ -1,0 +1,46 @@
+@import "var";
+
+/*Stilo de la barra de navegación principal*/
+
+#navbar-main {
+    border-bottom: 2px solid black;
+    font-family: $font-stack;
+    .navbar-brand {
+        padding: 0px;
+        img {
+            height: 100%;
+            padding: 15px;
+            width: auto;
+        }
+    }
+    .navbar {
+        background-color: $primary;
+        margin-bottom: 0px;
+        border: none;
+        border-radius: 0px;
+    }
+    ul {
+        li {
+            a {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                color: $secundary;
+                &:hover {
+                    color: $hovertext;
+                }
+            }
+        }
+    }
+}
+
+
+/*stylo del footer*/
+
+#footer {
+    font-family: $font-stack;
+    color: $secundary;
+    background-color: $primary;
+    padding: 20px;
+    border-top: 2px solid black;
+}
