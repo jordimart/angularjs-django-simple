@@ -1,0 +1,187 @@
+@import "var";
+#home {
+    #slider {
+        background: url(../images/fondo1.jpg) no-repeat;
+        background-size: cover;
+        position: relative;
+        display: table;
+        width: 100%;
+        height: 450px;
+        .text-vertical-center {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+    #services {
+        background-color: white;
+        .card {
+            padding: 50px 10px;
+            h4 {
+                color: $light;
+                text-align: center;
+            }
+            hr {
+                border: 1px solid $light;
+                width: 30%;
+            }
+            p {
+                color: $text;
+            }
+        }
+    }
+    #banner {
+        background: url(../images/fondo3.jpg) no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center top;
+        padding: 40px 0px 40px 0px;
+        color: white;
+        text-align: center;
+        vertical-align: center;
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: $light;
+            color: white;
+            &:hover {
+                background-color: white;
+                color: $light;
+            }
+        }
+    }
+    #projects {
+        padding: 50px;
+        h4 {
+            @include section-title;
+        }
+        hr {
+            @include hr-style;
+        }
+        .row {
+            padding-top: 30px;
+        }
+    }
+    #app {
+        padding: 50px;
+        h4 {
+            @include section-title;
+        }
+        p {
+            color: $text;
+        }
+        hr {
+            border: 1px solid $light;
+            width: 10%;
+        }
+        .info {
+            hr {
+                border: 1px solid green;
+                width: 50%;
+            }
+            .parr {
+                padding: 20px 10px;
+            }
+            .img {
+                text-align: center;
+            }
+        }
+    }
+    #about {
+        padding: 50px;
+        text-align: center;
+        h4 {
+            @include section-title;
+        }
+        hr {
+            @include hr-style;
+        }
+        h3 {
+            padding: 30px;
+            color: $text;
+        }
+        li {
+            color: $light;
+            padding: 10px;
+        }
+    }
+    #tech {
+        text-align: center;
+        padding: 50px;
+        h4 {
+            @include section-title;
+        }
+        hr {
+            @include hr-style;
+        }
+        .image {
+            max-width: 100%;
+        }
+        img {
+            padding: 30px;
+            max-width: 100%;
+            height: 190px;
+        }
+    }
+}
+
+
+/* Landscape phones and down */
+
+@media (max-width: 480px) {}
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+    #home {
+        #services {
+            padding: 10px;
+            .card {
+                padding: 10px 0px;
+            }
+        }
+        #projects {
+            padding: 10px;
+        }
+        #banner {
+            h2 {
+                padding: 10px 0px;
+            }
+            h4 {
+                padding: 10px 0px;
+            }
+            a {
+                margin: 10px 0px;
+            }
+        }
+        #app {
+            padding: 10px;
+            .button {
+                text-align: center;
+            }
+            .video-wrapper {
+                display: none;
+            }
+        }
+        #about {
+            padding: 10px;
+        }
+        #tech {
+            padding: 10px;
+        }
+    }
+}
+
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+
+/* Large desktop */
+
+@media (min-width: 1200px) {}

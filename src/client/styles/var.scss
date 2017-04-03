@@ -1,0 +1,32 @@
+/*Variables generales para la aplicación*/
+
+//Colores
+$primary: #323946;
+$light: rgb(37, 162, 214);
+$text: #424242;
+//Fuentes
+//@import url('https://fonts.googleapis.com/css?family=Roboto');
+$font-stack : Helvetica,
+Arial,
+sans-serif;
+//Configuraciones
+@mixin icon-blue {
+    font-family: FontAwesome;
+    color: $light;
+    border-radius: 50%;
+    border: 1px solid $light;
+    font-size: 15px !important;
+    padding: 8px;
+    margin-right: 5px;
+}
+
+@mixin section-title {
+    color: $light;
+    text-align: center;
+    font-size: 40px;
+}
+
+@mixin hr-style {
+    border: 1px solid $light;
+    width: 10%;
+}

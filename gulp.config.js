@@ -1,6 +1,6 @@
 module.exports = function() {
-    var client = './client/';
-    var server = './server/';
+    var client = './src/client/';
+    var server = './src/server/';
     var clientApp = client + 'app/';
     var report = './report/';
     var root = './';
@@ -23,7 +23,7 @@ module.exports = function() {
          */
         // all javascript that we want to vet
         alljs: [
-            './**/*.js',
+            './src/**/*.js',
             './*.js'
         ],
         build: './build/',
@@ -50,7 +50,7 @@ module.exports = function() {
         report: report,
         root: root,
         server: server,
-        source: '/',
+        source: 'src/',
         stubsjs: [
             bower.directory + 'angular-mocks/angular-mocks.js',
             client + 'stubs/**/*.js'

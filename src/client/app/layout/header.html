@@ -1,0 +1,75 @@
+<section id="header">
+
+    <nav class="navbar navbar-fixed-top " ng-controller="HeaderController as vm">
+        <div class="navbar-top">
+            <div class="container">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="hidden-sm hidden-md">{{'LANGUAGE'|translate}}</span> <span class="glyphicon glyphicon-menu-down"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a ng-click="vm.setLang( 'en') " translate="ENGLISH">English</a>
+                            <a ng-click="vm.setLang( 'es') " translate="CASTELLANO">Castellano</a>
+                            <a ng-click="vm.setLang( 'ca') " translate="CATALA">Catala</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 contact">
+                    <ul>
+                        <li>
+                            <a class=" fa fa-facebook-square " href="# "></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter " href="# "></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-google-plus " href="# "></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--container-->
+        </div>
+        <!--navbar-top-->
+        <div class="navbar-inner ">
+            <div class="container">
+                <div class="col-md-7 col-sm-12">
+                    <h1><a href="/"><span>EIE</span> source</a></h1>
+                </div>
+                <div class="col-md-5 col-sm-12 contact">
+                    <div>
+                        <strong><a class="phone" href="tel:+660371229">660371229</a></strong>
+                    </div>
+                    <div>
+                        <strong><a class="email" href="mailto:jordimart83@gmail.com">jordimart85@gmail.com</a></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--fin navbar-inner-->
+        <div class="navbar-main">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar2">
+          
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                    <a class="navbar-brand" href="/"><span>EIE</span> source</a>
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav ">
+                        <li ng-class="vm.isCurrent(r) " ng-repeat="r in vm.navRoutes ">
+                            <a ui-sref="{{r.name}} " ng-bind-html="r.settings.content "></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--fin navbar main-->
+    </nav>
+
+</section>
