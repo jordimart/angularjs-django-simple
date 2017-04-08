@@ -5,7 +5,7 @@
         .module('app.core', [
             'ngAnimate', 'ngSanitize', 'ngCookies',
             'blocks.exception', 'blocks.logger', 'blocks.router',
-            'ui.router', 'ngplus', 'pascalprecht.translate', 'angular-carousel'
+            'ui.router', 'ngplus', 'pascalprecht.translate', 'angular-carousel', 'ngResource'
         ]).factory('MyErrorHandler', function($q, $log) {
             return function(part, lang, response) {
                 $log.error('The "' + part + '/' + lang + '" part was not loaded. ' + response);
@@ -17,5 +17,8 @@
                 console.log('TRANSLATE REFRESH');
                 $translate.refresh();
             });
+        })
+        .run(function($http, $cookies) {
+            $http.defaults.headers.common['X-CSRFToken'] = $cookies.csrftoken;
         });
 })();

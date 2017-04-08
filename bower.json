@@ -34,7 +34,9 @@
     "angular-translate-storage-local": "^2.14.0",
     "angular-touch": ">=1.2.10",
     "angular-translate-storage-cookie": "^2.14.0",
-    "angular-carousel": "^1.0.1"
+    "angular-carousel": "^1.0.1",
+    "ng-resource": "^0.0.2",
+    "angular-resource": "^1.6.4"
   },
   "resolutions": {
     "angular": "1.5.3"

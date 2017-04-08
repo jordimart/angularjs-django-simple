@@ -1,33 +1,34 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('app.core')
-    .factory('dataservice', dataservice);
+    angular
+        .module('app.core')
+        .factory('dataservice', dataservice);
 
-  dataservice.$inject = ['$http', '$q', 'exception', 'logger'];
-  /* @ngInject */
-  function dataservice($http, $q, exception, logger) {
-    var service = {
-      sendEmail: sendEmail
-    };
+    dataservice.$inject = ['$http', '$q', 'exception', 'logger'];
+    /* @ngInject */
+    function dataservice($http, $q, exception, logger) {
+        var service = {
+            localCall: localCall
+        };
 
-    return service;
+        return service;
 
-    function sendEmail(data) {
+        function localCall() {
+            return $http.get('http://localhost:8000/admin/')
+                .then(success)
+                .catch(fail);
 
-      return $http.post('/api/sendmail', data)
-        .then(success)
-        .catch(fail);
+            function success(response) {
 
-      function success() {
-        return true;
-      }
+                return response;
+            }
 
-      function fail() {
-        return false;
-      }
+            function fail(e) {
+
+                return exception.catcher('XHR Failed for socialSignin')(e);
+            }
+        }
     }
-  }
 
 })();

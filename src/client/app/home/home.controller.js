@@ -5,9 +5,9 @@
         .module('app.home')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['logger', '$translatePartialLoader'];
+    HomeController.$inject = ['logger', '$translatePartialLoader', 'dataservice'];
 
-    function HomeController(logger, $translatePartialLoader) {
+    function HomeController(logger, $translatePartialLoader, dataservice) {
         var vm = this;
         vm.title = 'Home';
 
@@ -17,7 +17,9 @@
 
         function activate() {
             logger.info('Activated Home View');
-
+            dataservice.localCall().then(function(response) {
+                console.log(response);
+            });
         }
     }
 })();
