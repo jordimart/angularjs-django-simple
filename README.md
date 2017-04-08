@@ -18,7 +18,7 @@ Los objetivos son:
 
  ### Ideas y conclusiones: ###
 
- 1- 7/4/2017: Servir el index.html delcliente y su contenido estático desde el servidor al entrar en la ruta del dominio "/":
+ 1- 7/4/2017: Servir el index.html del cliente y su contenido estático desde el servidor al entrar en la ruta del dominio "/":
 
  En principio está idea me parece fenomenal, puedo tener el cliente y el servidor unidos solo por un index htmal.
 
@@ -40,6 +40,12 @@ Veo que el desarrollo se complicaría ya que los cambios no serían refrescados 
 
 No sirvo por completo el contenido.
 
+Por el momento probarélaopción de dos servidores para ver si es mas factible y poder comparar.
+
+2- 7/4/2017: Conectar mediante cross-domain Angular y django utilizandodos instancias.
+
+Para trabajar con dos servidores es necesario utilizar cross domain y esto nos permitirá realizar conexiones ajax desde diferentes dominios
+y de esta forma poder conectar los dos servidores.
 
 
 
