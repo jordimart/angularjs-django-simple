@@ -15,7 +15,7 @@
         return service;
 
         function localCall() {
-            return $http.get('http://localhost:8000/admin/')
+            return $http.get('http://localhost:8000/restaurants/')
                 .then(success)
                 .catch(fail);
 

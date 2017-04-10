@@ -16,9 +16,11 @@ Los objetivos son:
 
 - Conectar Angular con django REST framework.
 
- ### Ideas y conclusiones: ###
+ ### Métodos y conclusiones: ###
+ 
+ ### Método 1 ###
 
- 1- 7/4/2017: Servir el index.html del cliente y su contenido estático desde el servidor al entrar en la ruta del dominio "/":
+ Servir el index.html del cliente y su contenido estático desde el servidor al entrar en la ruta del dominio "/":
 
  En principio está idea me parece fenomenal, puedo tener el cliente y el servidor unidos solo por un index htmal.
 
@@ -42,10 +44,32 @@ No sirvo por completo el contenido.
 
 Por el momento probarélaopción de dos servidores para ver si es mas factible y poder comparar.
 
-2- 7/4/2017: Conectar mediante cross-domain Angular y django utilizandodos instancias.
+### Método 2 ###
+
+Conectar mediante cross-domain Angular y django utilizandodos instancias.
 
 Para trabajar con dos servidores es necesario utilizar cross domain y esto nos permitirá realizar conexiones ajax desde diferentes dominios
 y de esta forma poder conectar los dos servidores.
+
+El siguiente paso es instalar la API_REST FRAMEWORK de Djangoy realizar un get para recoger un listado.
+
+#### Resultado: ####
+
+He conseguido configurar el cros-domain, aunque la parte de angular no me quedo clara o no he sabido donde colocarla, la respuesta ha sido correcta.
+Realizo la prueba de quitar el acceso en el Server y me responde como que no hay servidor.
+
+La instalación sencilla mediante un tutorial de la API_REST también ha funcionado bien, de momento ya consigo listar el modelo de restaurantes en un console.log() con lo cual ya recibo los datos.
+ 
+#### Conclusiones: ####
+
+A pesar de tener dos instancias de servidor abiertas  de esta forma el cliente me trabaja bien sin tener que realizar grandes cambios.
+Por lo menos para desarrollar es mas fácil y mas ágil.
+
+Las pruebas de la API las realicé primero mediante shell de django, después mediante un mini server llamdo httpie y finalmente añadí la petición al código deAngular y pude ver el resultado.
+
+
+
+
 
 
 
